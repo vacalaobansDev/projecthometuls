@@ -44,7 +44,7 @@ export class ProyectosService {
     this.cargando = true;
 
     // return this.http.get<ProyectosResponse>('/default/myFirstLambda');
-    return this.http.get<ProyectosResponse>(`${this.url_proxy}`)
+    return this.http.get<ProyectosResponse>(`${this.url_api}`)
       .pipe(
           map( (resp) => resp.data ),
           tap( () => {
@@ -59,7 +59,7 @@ export class ProyectosService {
     // this.http.get<ProyectosResponse>(`${this.url_proxy}`, {
     //   params: this.params
     // });
-    return this.http.get<ProyectosResponse>(`${this.url_proxy}`)
+    return this.http.get<ProyectosResponse>(`${this.url_api}`)
       .pipe(
         map( resp => resp.data  )
       );
@@ -71,7 +71,7 @@ export class ProyectosService {
     // this.http.get<ProyectosResponse>(`${this.url_proxy}`, {
     //   params: this.params
     // });
-    return this.http.get<ProyectosResponse>(`${this.url_proxy}`)
+    return this.http.get<ProyectosResponse>(`${this.url_api}`)
       .pipe(
         map( resp => resp.data.filter( (p) => ( p.ID.toString() === id.toString() ) )  ),
         catchError( error => of([]) )
