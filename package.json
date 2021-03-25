@@ -4,7 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
+<<<<<<< HEAD
     "build": "ng build",
+=======
+    "build": "ng build --prod",
+>>>>>>> 4aad0077f7fb84c19af70079c1c9215beadefbe2
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
